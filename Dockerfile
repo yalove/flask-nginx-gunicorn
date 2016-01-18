@@ -23,3 +23,4 @@ COPY gunicorn.conf /etc/supervisor/conf.d/gunicorn.conf
 
 # Start processes
 CMD ["/usr/bin/supervisord"]
+EXPOSE 80
