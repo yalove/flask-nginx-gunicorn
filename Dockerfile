@@ -6,9 +6,9 @@ RUN apt-get update
 RUN apt-get install -y python python-pip python-virtualenv nginx gunicorn supervisor
 
 # Setup flask application
-RUN mkdir -p /blog
-COPY app /blog
-RUN pip install -r /blog/requirements.txt
+RUN mkdir -p /www
+COPY app /www
+RUN pip install -r /www/requirements.txt
 
 # Setup nginx
 RUN rm /etc/nginx/sites-enabled/default
